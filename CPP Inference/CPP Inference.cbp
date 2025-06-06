@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="CPP Inference" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/CPP Inference" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="../../../../../../../onnxruntime-win-x64-1.22.0/include" />
+					<Add directory="../../../../../../../OpenCV-MinGW-Build-OpenCV-4.5.5-x64/include" />
+					<Add directory="./" />
+				</Compiler>
+				<Linker>
+					<Add library="../../../../../../../onnxruntime-win-x64-1.22.0/lib/onnxruntime.lib" />
+					<Add library="../../../../../../../OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_core455.dll.a" />
+					<Add library="../../../../../../../OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_highgui455.dll.a" />
+					<Add library="../../../../../../../OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_imgcodecs455.dll.a" />
+					<Add library="../../../../../../../OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_imgproc455.dll.a" />
+					<Add directory="../../../../../../../onnxruntime-win-x64-1.22.0/lib" />
+					<Add directory="../../../../../../../OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/CPP Inference" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="./" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="ImagePreprocessor.cpp" />
+		<Unit filename="ImagePreprocessor.h" />
+		<Unit filename="OrtModel.cpp" />
+		<Unit filename="OrtModel.h" />
+		<Unit filename="Visualizer.cpp" />
+		<Unit filename="Visualizer.h" />
+		<Unit filename="YoloNASInferencer.cpp" />
+		<Unit filename="YoloNASInferencer.h" />
+		<Unit filename="main.cpp" />
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>
